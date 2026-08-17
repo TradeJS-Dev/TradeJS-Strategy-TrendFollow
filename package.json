@@ -1,7 +1,7 @@
 {
   "name": "@tradejs/strategy-trend-follow",
   "version": "3.0.0",
-  "description": "TrendFollow strategy plugin for TradeJS.",
+  "description": "ATR trailing-trend strategy using pivot structure, optional breakout and benchmark filters, and trail or opposite-signal exits for TradeJS.",
   "type": "module",
   "packageManager": "yarn@4.13.0",
   "engines": {
@@ -12,7 +12,10 @@
     "trading",
     "strategy",
     "plugin",
-    "backtesting"
+    "backtesting",
+    "ai",
+    "claude",
+    "codex"
   ],
   "homepage": "https://tradejs.dev",
   "repository": {

@@ -2,6 +2,13 @@
 
 TradeJS strategy plugin providing `TrendFollow`.
 
+## Strategy overview
+
+`TrendFollow` maintains an ATR-offset trailing trend state from replayable
+pivot structure. It trades directional flips with optional structure-breakout,
+trend, benchmark, volume, persistence, RSI, and volatility filters, and can
+exit on the trailing stop or an opposite signal.
+
 ## Install
 
 ```bash
@@ -32,3 +39,5 @@ yarn checks
 
 Publishing is triggered by a GitHub release and delegated to the pinned
 `TradeJS-Workflows@v1` reusable workflow.
+
+Keywords: ai, claude, codex.
