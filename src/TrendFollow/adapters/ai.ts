@@ -172,7 +172,7 @@ Interpretation rules for TrendFollow:
 export const trendFollowAiAdapter = withStrategyLocalAiGate(
   trendFollowBaseAiAdapter,
   {
-    id: "trend_follow_short_breadth_2026_08_12",
+    id: "trend_follow_short_breadth_loss_guard_2026_08_18",
     approves: ({ signal, payload }) => {
       const advancers = getAiPayloadNumber(
         payload,
@@ -182,13 +182,32 @@ export const trendFollowAiAdapter = withStrategyLocalAiGate(
         payload,
         "additionalIndicators.baseContext.relative.marketBreadths.top5.unchanged",
       );
+      const ethM15LevelsCrossed = getAiPayloadNumber(
+        payload,
+        "additionalIndicators.baseContext.relative.referencePsychologicalLevels.ETHUSDT.windows.m15.levelsCrossed",
+      );
+      const distanceToStopPct = getAiPayloadNumber(
+        payload,
+        "additionalIndicators.trendFollowContext.distanceToStopPct",
+      );
+      const top5EqualWeightedReturn = getAiPayloadNumber(
+        payload,
+        "additionalIndicators.baseContext.relative.marketBreadths.top5.equalWeightedReturn",
+      );
+
+      const avoidsDiscoveredLossPocket =
+        (ethM15LevelsCrossed != null && ethM15LevelsCrossed > 1) ||
+        (distanceToStopPct != null && distanceToStopPct < 5.6151907) ||
+        (top5EqualWeightedReturn != null &&
+          top5EqualWeightedReturn > -0.0023580731);
 
       return (
         signal.direction === "SHORT" &&
         advancers != null &&
         advancers >= 2 &&
         top5Unchanged != null &&
-        top5Unchanged <= 0
+        top5Unchanged <= 0 &&
+        avoidsDiscoveredLossPocket
       );
     },
   },
