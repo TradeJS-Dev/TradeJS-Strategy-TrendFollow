@@ -13,6 +13,15 @@ exit on the trailing stop or an opposite signal.
 
 ![TrendFollow strategy logic](https://raw.githubusercontent.com/TradeJS-Dev/TradeJS-Strategy-TrendFollow/main/docs/strategy-logic.svg)
 
+## Signal on an example chart
+
+The purple ATR-offset trail holds the bearish regime until price crosses it and the bounded state flips upward; optional context filters then qualify the LONG.
+
+![TrendFollow signal on an illustrative ticker chart](https://raw.githubusercontent.com/TradeJS-Dev/TradeJS-Strategy-TrendFollow/main/docs/signal-example.svg)
+
+The illustration is schematic, not market data. Exact thresholds, confirmation
+rules, and risk parameters come from the active TradeJS strategy config.
+
 ## Install
 
 ```bash
