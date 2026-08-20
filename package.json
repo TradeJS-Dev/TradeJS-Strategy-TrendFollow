@@ -1,6 +1,6 @@
 {
   "name": "@tradejs/strategy-trend-follow",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "ATR trailing-trend strategy using pivot structure, optional breakout and benchmark filters, and trail or opposite-signal exits for TradeJS.",
   "type": "module",
   "packageManager": "yarn@4.13.0",
