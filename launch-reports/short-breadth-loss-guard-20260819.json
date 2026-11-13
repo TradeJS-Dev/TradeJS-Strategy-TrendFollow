@@ -1,0 +1,25 @@
+{
+  "schema": "tradejs-launch-report/v1",
+  "strategy": "TrendFollow",
+  "candidate": "Short breadth loss guard",
+  "sourceSha256": "a9ebe226e17fabfda19a5eee5791940e3ab8dbe54740b7d5c4ed3b6f4a0c57b5",
+  "metrics": {
+    "trades": 83,
+    "pnl": 295.85999999999996,
+    "maxDrawdown": 23.840000000000032,
+    "maxLossStreak": 2,
+    "profitFactor": 3.2746213577304517,
+    "winRatePercent": 61.44578313253012,
+    "maxDrawdownDurationDays": 83.1875
+  },
+  "researchRiskUsdt": 10,
+  "note": "Drawdown duration is calculated from the retained chart. Headline metrics use the research report’s trade ordering.",
+  "period": {
+    "start": 1637718300000,
+    "end": 1786185900000
+  },
+  "chart": {
+    "caption": "Historical cumulative P&L and drawdown from peak, in USDT.",
+    "sha256": "a632d5ddbe24852e4bc2b5ea66745958502218815a4ede4c0d68abe173a58062"
+  }
+}
