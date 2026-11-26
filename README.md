@@ -1,6 +1,9 @@
 # @tradejs/strategy-trend-follow
 
-TradeJS strategy plugin providing `TrendFollow`.
+TrendFollow looks for an existing trend to continue. It checks whether the
+latest price move still supports that direction before considering an entry.
+
+[See examples and configuration in the TradeJS Marketplace](https://tradejs.dev/marketplace/trend-follow).
 
 ## Strategy overview
 
